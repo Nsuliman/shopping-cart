@@ -8,13 +8,16 @@ var Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // Done: Fill in this instance method to create a new CartItem and add it to this.items
-  var itemnew = new CartItem(product,quantity);
-  this.items.push(itemnew);
+  var itemNew = new CartItem(product,quantity);
+  console.log('itemsNew : ', itemsNew);
+  this.items.push(itemNew);
+  console.log('this.items after add new item : ', this.items);
 };
 
 Cart.prototype.saveToLocalStorage = function() {
   // Done: Fill in this instance method to save the contents of the cart to localStorage
   var saveItemsStrg = JSON.stringify(this.items);
+  console.log('saveItemsStrg : ', saveItemsStrg);
   localStorage.setItem(' All-Items ' , saveItemsStrg);
 };
 
@@ -22,17 +25,23 @@ Cart.prototype.removeItem = function(item) {
   // Done: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
   this.items.splice (item);
+  console.log('this.items after remove item  : ', this.items);
 };
 
 var CartItem = function(product, quantity) {
   this.product = product;
+  console.log('this.product : ', this.product);
   this.quantity = quantity;
+  console.log('this.quantity : ', this.quantity);
 };
 
 // Product contructor.
 var Product = function(filePath, name) {
   this.filePath = filePath;
+  console.log('this.filePath : ', this.filePath);
   this.name = name;
+  console.log('this.name : ', this.name);
+
   Product.allProducts.push(this);
 };
 Product.allProducts = [];
