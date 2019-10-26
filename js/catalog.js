@@ -45,11 +45,16 @@ function addSelectedItemToCart() {
   var addItemQuantity = document.getElementById('quantity').value;        // to get the entered quantity from quantity input 
   // Done : using those, add one item to the Cart
   cart.addItem(addSelectItem,addItemQuantity);
+  //console.log('cart  : ', cart );
 
 }
 
-// TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+// Done: Update the cart count in the header nav with the number of items in the Cart
+function updateCounter() {
+
+var counterUpdate = document.getElementById('quantity').value;
+document.getElementById('itemCount').textContent = counterUpdate;
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
