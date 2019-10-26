@@ -18,8 +18,10 @@ function renderCart() {
   showCart();
 }
 
-// TODO: Remove all of the rows (tr) in the cart table (tbody)
-function clearCart() {}
+// Done: Remove all of the rows (tr) in the cart table (tbody)
+function clearCart() {
+  $("#cart").empty();          // By seraching on Google 
+}
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
