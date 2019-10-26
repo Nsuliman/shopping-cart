@@ -56,10 +56,16 @@ var counterUpdate = document.getElementById('quantity').value;
 document.getElementById('itemCount').textContent = counterUpdate;
 }
 
-// TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
+// Done: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
-  // TODO: Get the item and quantity from the form
-  // TODO: Add a new element to the cartContents div with that information
+  // Done: Get the item and quantity from the form
+  var outputItem = document.getElementById('items').value; 
+  var outputQuantity = document.getElementById('quantity').value; 
+  // Done: Add a new element to the cartContents div with that information
+  var showOutput = document.getElementById('cartContents');
+  var output22 = document.createElement('div');
+  showOutput.appendChild(output22);
+  output22.textContent = outputItem + ' -----> ' + outputQuantity ;
 }
 
 // Set up the "submit" event listener on the form.
